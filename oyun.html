@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyun</title>
+    <link rel="stylesheet" href="styles.min.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Site Başlığı</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link" href="oyun.html">Oyun</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Div Yakalama Oyunu</h1>
+        <div id="oyunDiv" style="width:100px; height:100px; background-color:blue; position:absolute;"></div>
+    </div>
+
+    <script>const oyunDiv = document.getElementById('oyunDiv');
+
+        function rastgeleKonum() {
+            const x = Math.floor(Math.random() * (window.innerWidth - 100));
+            const y = Math.floor(Math.random() * (window.innerHeight - 100));
+            oyunDiv.style.left = x + 'px';
+            oyunDiv.style.top = y + 'px';
+        }
+
+        oyunDiv.addEventListener('mouseover', rastgeleKonum);</script>
+</body>
+</html>
